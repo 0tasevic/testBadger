@@ -37,10 +37,14 @@ class Connection: NSObject{
         centralManager.connect(peripheral, options: nil);
     }
     
-    func writeValue() {
-        let myImage = UIImage(named: "amplitudo")!
+    func writeValue(image: UIImage?) {
+            var myImage = UIImage(named: "amplitudo")!
+        if image != nil {
+            myImage = image!
+        }
         
-        let imgData = myImage.jpegData(compressionQuality: 1)
+        let imgData = myImage.pngData()
+//        jpegData(compressionQuality: 1)
         var broj = 0
         
         var tenBytes = [[UInt8]]()
@@ -49,7 +53,7 @@ class Connection: NSObject{
         for byte in imgData! {
             broj += 1
             pomocni.append(byte)
-            if pomocni.count == 256{
+            if pomocni.count == 250{
                 tenBytes.append(pomocni)
                 pomocni = [UInt8]()
             }

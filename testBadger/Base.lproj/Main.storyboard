@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,13 +32,29 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OwA-3x-KNE"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eh-dN-Fos">
+                                <rect key="frame" x="20" y="248" width="374" height="100"/>
+                                <color key="backgroundColor" red="0.61004823450000001" green="0.76268249749999995" blue="0.2390485406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="VNN-1Y-Zbk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <state key="normal" title="new image"/>
+                                <connections>
+                                    <action selector="addPhotosButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xr7-yq-oAh"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIV-xe-aNn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="lBq-L6-RF7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="5bT-ya-oGa"/>
+                            <constraint firstItem="jzp-jB-Rgc" firstAttribute="top" secondItem="8eh-dN-Fos" secondAttribute="bottom" constant="50" id="Fj6-E6-YUO"/>
                             <constraint firstItem="jzp-jB-Rgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JT1-DZ-fat"/>
+                            <constraint firstAttribute="trailing" secondItem="8eh-dN-Fos" secondAttribute="trailing" constant="20" id="LRH-Ll-a6g"/>
                             <constraint firstItem="jzp-jB-Rgc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PnN-sB-iea"/>
                             <constraint firstItem="jzp-jB-Rgc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WSe-5D-Gj1"/>
+                            <constraint firstItem="8eh-dN-Fos" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yuj-TE-8cu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lBq-L6-RF7" secondAttribute="bottom" id="a9L-ps-X4o"/>
                             <constraint firstItem="lBq-L6-RF7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c9J-uA-8XC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jzp-jB-Rgc" secondAttribute="trailing" constant="20" id="clj-OV-vIm"/>
@@ -47,6 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="button" destination="jzp-jB-Rgc" id="TPX-cx-97n"/>
+                        <outlet property="galleryButton" destination="8eh-dN-Fos" id="xhR-hQ-UQM"/>
                         <outlet property="table" destination="lBq-L6-RF7" id="yuh-Ej-v6O"/>
                     </connections>
                 </viewController>
